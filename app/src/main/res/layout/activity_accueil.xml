@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="#000000">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="?attr/actionBarSize"
+            android:layout_marginRight="?attr/actionBarSize"
+            android:text="Recherche"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <ImageButton
+        android:id="@+id/imgBtnProfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/account" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_below="@id/toolbar"
+        android:gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/imgProfile"
+            android:layout_width="275dp"
+            android:layout_height="300dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/btnOther"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imgProfile"
+            android:layout_below="@+id/imgProfile"
+            android:layout_marginTop="5dp"
+            android:background="#E50000"
+            android:text="Un autre"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnThis"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imgProfile"
+            android:layout_below="@+id/imgProfile"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:background="#0EB100"
+            android:text="Celui-là" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

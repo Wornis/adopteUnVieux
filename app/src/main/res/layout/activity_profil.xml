@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="#000000">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="?attr/actionBarSize"
+            android:layout_marginRight="?attr/actionBarSize"
+            android:text="Mon profil"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/close" />
+
+    <ImageButton
+        android:id="@+id/btnValid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/background_dark"
+        android:text="Departure"
+        app:srcCompat="@drawable/check" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <ImageButton
+            android:id="@+id/imgPhoto"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="27dp" />
+
+        <TextView
+            android:id="@+id/textViewPrenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgPhoto"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/imgPhoto"
+            android:text="Prénom"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editPrenom"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/textViewPrenom"
+            android:layout_below="@+id/textViewPrenom"
+            android:background="@drawable/border" />
+
+        <TextView
+            android:id="@+id/textViewNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editPrenom"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imgPhoto"
+            android:text="Nom"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editNom"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/textViewNom"
+            android:layout_below="@+id/textViewNom"
+            android:background="@drawable/border" />
+
+        <TextView
+            android:id="@+id/textViewBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imgPhoto"
+            android:layout_below="@+id/imgPhoto"
+            android:layout_marginTop="5dp"
+            android:text="Date de naissance"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editDay"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/textViewBirth"
+            android:layout_below="@+id/textViewBirth"
+            android:background="@drawable/border"
+            android:hint="JJ" />
+
+        <EditText
+            android:id="@+id/editMonth"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textViewBirth"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/editDay"
+            android:background="@drawable/border"
+            android:hint="MM" />
+
+        <EditText
+            android:id="@+id/editYear"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textViewBirth"
+            android:layout_marginLeft="25dp"
+            android:layout_toEndOf="@+id/editMonth"
+            android:background="@drawable/border"
+            android:hint="AAAA" />
+
+        <TextView
+            android:id="@+id/textViewPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editDay"
+            android:layout_below="@+id/editDay"
+            android:layout_marginTop="20dp"
+            android:text="Où êtes-vous ?"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editPlace"
+            android:layout_width="225dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/textViewPlace"
+            android:layout_below="@+id/textViewPlace"
+            android:background="@drawable/border"
+            android:hint="Arcueil" />
+
+        <ImageButton
+            android:id="@+id/imgBtnPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textViewPlace"
+            android:layout_marginLeft="15dp"
+            android:layout_toEndOf="@+id/editPlace"
+            android:background="@android:color/background_dark"
+            app:srcCompat="@drawable/crosshairs_gps" />
+
+        <TextView
+            android:id="@+id/textViewDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editPlace"
+            android:layout_below="@+id/editPlace"
+            android:layout_marginTop="20dp"
+            android:text="Décrivez-vous !"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editDesc"
+            android:layout_width="300dp"
+            android:layout_height="160dp"
+            android:layout_alignStart="@+id/textViewDesc"
+            android:layout_below="@+id/textViewDesc"
+            android:accessibilityLiveRegion="2"
+            android:background="@drawable/border"
+            android:hint="Décrivez-vous..."
+            android:inputType="textMultiLine"
+            android:maxLength="2000"
+            android:padding="3dp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
