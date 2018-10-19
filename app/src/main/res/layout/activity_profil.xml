@@ -77,7 +77,8 @@
             android:layout_height="30dp"
             android:layout_alignStart="@+id/textViewPrenom"
             android:layout_below="@+id/textViewPrenom"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:paddingLeft="5dp" />
 
         <TextView
             android:id="@+id/textViewNom"
@@ -97,7 +98,8 @@
             android:layout_height="30dp"
             android:layout_alignStart="@+id/textViewNom"
             android:layout_below="@+id/textViewNom"
-            android:background="@drawable/border" />
+            android:background="@drawable/border"
+            android:paddingLeft="5dp" />
 
         <TextView
             android:id="@+id/textViewBirth"
@@ -117,17 +119,23 @@
             android:layout_alignStart="@+id/textViewBirth"
             android:layout_below="@+id/textViewBirth"
             android:background="@drawable/border"
-            android:hint="JJ" />
+            android:enabled="false"
+            android:hint="JJ"
+            android:inputType="number"
+            android:paddingLeft="5dp" />
 
         <EditText
             android:id="@+id/editMonth"
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:layout_below="@+id/textViewBirth"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="8dp"
             android:layout_toEndOf="@+id/editDay"
             android:background="@drawable/border"
-            android:hint="MM" />
+            android:enabled="false"
+            android:hint="MM"
+            android:inputType="number"
+            android:paddingLeft="5dp" />
 
         <EditText
             android:id="@+id/editYear"
@@ -137,7 +145,10 @@
             android:layout_marginLeft="25dp"
             android:layout_toEndOf="@+id/editMonth"
             android:background="@drawable/border"
-            android:hint="AAAA" />
+            android:enabled="false"
+            android:hint="AAAA"
+            android:inputType="number"
+            android:paddingLeft="5dp" />
 
         <TextView
             android:id="@+id/textViewPlace"
@@ -157,7 +168,8 @@
             android:layout_alignStart="@+id/textViewPlace"
             android:layout_below="@+id/textViewPlace"
             android:background="@drawable/border"
-            android:hint="Arcueil" />
+            android:hint="Arcueil"
+            android:paddingLeft="5dp" />
 
         <ImageButton
             android:id="@+id/imgBtnPlace"
@@ -186,12 +198,13 @@
             android:layout_height="160dp"
             android:layout_alignStart="@+id/textViewDesc"
             android:layout_below="@+id/textViewDesc"
-            android:accessibilityLiveRegion="2"
             android:background="@drawable/border"
+            android:gravity="top"
             android:hint="Décrivez-vous..."
             android:inputType="textMultiLine"
             android:maxLength="2000"
-            android:padding="3dp" />
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp" />
 
 
     </RelativeLayout>

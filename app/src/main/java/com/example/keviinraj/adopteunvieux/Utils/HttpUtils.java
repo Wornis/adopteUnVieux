@@ -9,7 +9,8 @@ import com.loopj.android.http.RequestParams;
  */
 
 public class HttpUtils {
-    private static final String BASE_URL = "http://localhost:3000/api/";
+    //TODO : localhost ou 10.0.0.2 selon device emulateur ou reel
+    private static final String BASE_URL = "http://10.0.2.2:3000/api/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -27,6 +28,10 @@ public class HttpUtils {
 
     public static void postByUrl(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
         client.post(url, params, responseHandler);
+    }
+
+    public static void patch(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+        client.patch(getAbsoluteUrl(url), params, responseHandler);
     }
 
     private static String getAbsoluteUrl(String relativeUrl) {

@@ -24,6 +24,17 @@
     </android.support.v7.widget.Toolbar>
 
     <ImageButton
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/white"
+        app:srcCompat="@drawable/exit" />
+
+    <ImageButton
         android:id="@+id/imgBtnProfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,8 +52,8 @@
 
         <ImageButton
             android:id="@+id/imgProfile"
-            android:layout_width="275dp"
-            android:layout_height="300dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="25dp" />
@@ -62,13 +73,49 @@
             android:id="@+id/btnThis"
             android:layout_width="125dp"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imgProfile"
-            android:layout_below="@+id/imgProfile"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="5dp"
             android:background="#0EB100"
-            android:text="Celui-là" />
+            android:text="Celui-là"
+            android:layout_alignBaseline="@+id/btnOther"
+            android:layout_alignBottom="@+id/btnOther"
+            android:layout_toEndOf="@+id/btnOther"
+            android:layout_marginStart="20dp" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="85dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/btnExit"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textViewPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewNom"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/textViewNom"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textViewDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewNom"
+        android:layout_below="@+id/textViewPrenom"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
 </RelativeLayout>
